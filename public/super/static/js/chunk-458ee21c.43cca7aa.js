@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-458ee21c"],{"0bd0":function(t,e,c){"use strict";c.r(e);var n=c("8430"),o=(c("0a69"),c("7f58")),a=(c("781c"),c("f2bf"));const i={class:"title"};function r(t,e,c,r,s,d){const u=o["a"],f=n["a"];return Object(a["openBlock"])(),Object(a["createBlock"])(f,{checked:"",label:t.id,disabled:""},{default:Object(a["withCtx"])(()=>[Object(a["createVNode"])(u,null,{default:Object(a["withCtx"])(()=>[Object(a["createElementVNode"])("div",i,Object(a["toDisplayString"])(t.title),1)]),_:1})]),_:1},8,["label"])}var s=Object(a["defineComponent"])({name:"AuthorizationCardItem",components:{},props:{id:{type:String,default:"txt"},title:{type:String,default:"txt"},desc:{type:String,default:"txt"},logo:{type:String,default:"txt"}},setup(){const t=Object(a["reactive"])({checkList:[]});Object(a["onBeforeMount"])(()=>{e()});const e=async()=>{};return{...Object(a["toRefs"])(t),fetchData:e}}}),d=(c("b42f"),function(t){t.__source="src/views/package/components/authorizationCardItem.vue"}),u=c("6b0d"),f=c.n(u);"function"===typeof d&&d(s);const l=f()(s,[["render",r],["__scopeId","data-v-46df21c3"]]);e["default"]=l},7042:function(t,e,c){},b42f:function(t,e,c){"use strict";c("7042")}}]);

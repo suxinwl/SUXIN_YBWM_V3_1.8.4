@@ -1,0 +1,66 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    container_name: ybwmv3-app
+    restart: unless-stopped
+    depends_on:
+      - mysql
+      - redis
+    ports:
+      - "8080:80"
+      - "5200:5200"
+    environment:
+      APP_ENV: local
+      APP_DEBUG: "true"
+      APP_URL: http://localhost:8080
+      DB_CONNECTION: mysql
+      DB_HOST: mysql
+      DB_PORT: "3306"
+      DB_DATABASE: ybybyb
+      DB_USERNAME: root
+      DB_PASSWORD: Adsj201202
+      DB_PREFIX: ybwm_v3_
+      REDIS_CLIENT: predis
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      CACHE_DRIVER: redis
+      QUEUE_CONNECTION: redis
+      SESSION_DRIVER: file
+      LARAVELS_LISTEN_IP: 127.0.0.1
+      LARAVELS_LISTEN_PORT: "5200"
+      LARAVELS_SERVER: LaravelS
+      LARAVELS_WORKER_NUM: "1"
+      LARAVELS_TASK_WORKER_NUM: "0"
+      LARAVELS_TIMER: "false"
+      LARAVELS_DAEMONIZE: "false"
+
+  mysql:
+    image: mysql:5.7
+    platform: linux/amd64
+    container_name: ybwmv3-mysql
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --sql-mode=NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+    environment:
+      MYSQL_ROOT_PASSWORD: Adsj201202
+      MYSQL_DATABASE: ybybyb
+      TZ: Asia/Shanghai
+    ports:
+      - "3307:3306"
+    volumes:
+      - ybwmv3-mysql:/var/lib/mysql
+      - ./184完整数据库.sql:/docker-entrypoint-initdb.d/001.sql:ro
+
+  redis:
+    image: redis:6-alpine
+    container_name: ybwmv3-redis
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+
+volumes:
+  ybwmv3-mysql:

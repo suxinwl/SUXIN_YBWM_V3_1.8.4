@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0aeeba"],{"0bb4":function(t,e,n){"use strict";n.r(e),n.d(e,"getList",(function(){return r})),n.d(e,"newsId",(function(){return d})),n.d(e,"postAdd",(function(){return a})),n.d(e,"adId",(function(){return i})),n.d(e,"getAdList",(function(){return o})),n.d(e,"apAdvertisement",(function(){return c})),n.d(e,"add",(function(){return f}));var u=n("b775");function r(t){return Object(u["default"])({url:"/api/news",method:"get",params:t})}function d(t,e,n=""){return Object(u["default"])({url:"/api/advertisement/"+n,method:e,data:t})}function a(t){return Object(u["default"])({url:"/api/ad",method:"post",data:t})}function i(t,e,n=""){return Object(u["default"])({url:"/api/ad/"+n,method:e,data:t})}function o(t){return Object(u["default"])({url:"/api/advertisement",method:"get",params:t})}function c(t,e,n=""){return Object(u["default"])({url:"/api/advertisement/"+n,method:e,data:t})}function f(t){return Object(u["default"])({url:"/api/advertisement",method:"post",data:t})}}}]);

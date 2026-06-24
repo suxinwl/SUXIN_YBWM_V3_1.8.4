@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d3677"],{"5d2d":function(e,n,t){"use strict";function o(e){let n=JSON.parse(localStorage.getItem(e));return n}function r(e,n){return localStorage.setItem(e,JSON.stringify(n))}function u(e){return localStorage.removeItem(e)}function c(e){return sessionStorage.getItem(e)}function i(e,n){return sessionStorage.setItem(e,n)}function d(e){return sessionStorage.removeItem(e)}function a(e){let n=!1;var t=document.createElement("input");return t.value=e,document.body.appendChild(t),t.select(),document.execCommand("copy"),n=!!document.execCommand("copy"),document.body.removeChild(t),{isSuccessRef:n}}t.r(n),t.d(n,"getStorage",(function(){return o})),t.d(n,"setStorage",(function(){return r})),t.d(n,"removeStorage",(function(){return u})),t.d(n,"getUniacId",(function(){return c})),t.d(n,"setUniacId",(function(){return i})),t.d(n,"removeUniacId",(function(){return d})),t.d(n,"useCopyToClipboard",(function(){return a}))}}]);

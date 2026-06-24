@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkyb_wmv3_business_admin"]=self["webpackChunkyb_wmv3_business_admin"]||[]).push([[36896],{36896:function(s,e,n){s.exports=n.p+"static/img/phoneBg.01cfce93.png"}}]);

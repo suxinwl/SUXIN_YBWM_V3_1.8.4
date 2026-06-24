@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-26eba0d6"],{1246:function(e,t,n){},f000:function(e,t,n){"use strict";n.r(t);var c=n("f2bf");const o={class:"bigTitle"},i={key:0};function l(e,t,n,l,s,r){return Object(c["openBlock"])(),Object(c["createElementBlock"])("div",o,[Object(c["createTextVNode"])(Object(c["toDisplayString"])(e.title)+" ",1),e.smllTitle?(Object(c["openBlock"])(),Object(c["createElementBlock"])("span",i,Object(c["toDisplayString"])(e.smllTitle),1)):Object(c["createCommentVNode"])("",!0)])}var s=Object(c["defineComponent"])({name:"BigTitle",props:{title:{type:String,default:""},smllTitle:{type:String,default:""}},setup(){const e=Object(c["reactive"])({}),t=()=>{};return{...Object(c["toRefs"])(e),open:t}}}),r=(n("f498"),function(e){e.__source="src/components/bigTitle.vue"}),a=n("6b0d"),p=n.n(a);"function"===typeof r&&r(s);const b=p()(s,[["render",l],["__scopeId","data-v-40831d08"]]);t["default"]=b},f498:function(e,t,n){"use strict";n("1246")}}]);

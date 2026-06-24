@@ -1,0 +1,65 @@
+{
+  "id": "4280292",
+  "name": "ybv3_syt",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "38470666",
+      "name": "减号-copy",
+      "font_class": "jianhao-copy",
+      "unicode": "e6002",
+      "unicode_decimal": 942082
+    },
+    {
+      "icon_id": "5387527",
+      "name": "加号",
+      "font_class": "jiahao1",
+      "unicode": "eaf3",
+      "unicode_decimal": 60147
+    },
+    {
+      "icon_id": "5387532",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "eaf5",
+      "unicode_decimal": 60149
+    },
+    {
+      "icon_id": "38470655",
+      "name": "加号-copy",
+      "font_class": "jiahao1-copy",
+      "unicode": "e6001",
+      "unicode_decimal": 942081
+    },
+    {
+      "icon_id": "9301469",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    },
+    {
+      "icon_id": "8696052",
+      "name": "手机",
+      "font_class": "huabanfuben",
+      "unicode": "e6000",
+      "unicode_decimal": 942080
+    },
+    {
+      "icon_id": "23241366",
+      "name": "收银台",
+      "font_class": "shouyintai",
+      "unicode": "e7de",
+      "unicode_decimal": 59358
+    },
+    {
+      "icon_id": "34796916",
+      "name": "微信小程序",
+      "font_class": "weixinxiaochengxu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    }
+  ]
+}

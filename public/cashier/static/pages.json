@@ -1,0 +1,78 @@
+{
+	"pages": [{
+		"path": "pages/login/index",
+		"style": {
+			"navigationBarTitleText": "登录"
+		}
+	}, {
+			"path": "pages/login/selectStore",
+			"style": {
+				"navigationBarTitleText": "选择店铺"
+			}
+		},
+		{
+			"path": "pages/login/selectShop",
+			"style": {
+				"navigationBarTitleText": "选择门店"
+			}
+		},{
+		"path": "pages/home/index",
+		"style": {
+			"navigationBarTitleText": "收银台"
+		}
+	}, {
+		"path": "pages/handover/index",
+		"style": {
+			"navigationBarTitleText": "收银台"
+		}
+	}, {
+		"path": "pages/handover/handOver",
+		"style": {
+			"navigationBarTitleText": "交班"
+		}
+	}, {
+		"path": "pages/handover/handRecord",
+		"style": {
+			"navigationBarTitleText": "交班记录"
+		}
+	}, {
+		"path": "pages/table/index",
+		"style": {
+			"navigationBarTitleText": "桌台"
+		}
+	}, {
+		"path": "pages/table/orderPay",
+		"style": {
+			"navigationBarTitleText": "桌台"
+		}
+	}, {
+		"path": "pages/table/table",
+		"style": {
+			"navigationBarTitleText": "桌台"
+		}
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "111",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom",
+		"rpxCalcMaxDeviceWidth": 2560, 
+		"rpxCalcBaseDeviceWidth": 2560, 
+		"rpxCalcIncludeWidth": 750, 
+		"app-plus": {
+			"titleView": false,
+			"bounce": "none"
+		}
+	},
+	"condition": { 
+		"current": 0, 
+		"list": [{
+			"name": "", 
+			"path": "",
+			"query": "" 
+		}]
+	},
+	"uniIdRouter": {},
+	"license": "MIT"
+}

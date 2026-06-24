@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkyb_wmv3_business_admin"]=self["webpackChunkyb_wmv3_business_admin"]||[]).push([[94374],{94374:function(s,e,n){s.exports=n.p+"static/img/myt.31ae375d.png"}}]);

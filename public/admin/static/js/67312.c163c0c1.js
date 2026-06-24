@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkyb_wmv3_business_admin"]=self["webpackChunkyb_wmv3_business_admin"]||[]).push([[67312],{67312:function(s,i,n){s.exports=n.p+"static/img/giftCard.8590c6d6.png"}}]);

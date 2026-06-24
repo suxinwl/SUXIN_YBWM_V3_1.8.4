@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkyb_wmv3_business_admin"]=self["webpackChunkyb_wmv3_business_admin"]||[]).push([[15295],{15295:function(s,e,n){s.exports=n.p+"static/img/step_logo.66fa7bfd.png"}}]);

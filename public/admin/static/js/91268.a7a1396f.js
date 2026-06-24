@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkyb_wmv3_business_admin"]=self["webpackChunkyb_wmv3_business_admin"]||[]).push([[91268],{91268:function(s,e,n){s.exports=n.p+"static/img/callorder.e4f717ce.png"}}]);

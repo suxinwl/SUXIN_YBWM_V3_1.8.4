@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-768b2f61"],{"6d2d":function(e,t,n){},e447:function(e,t,n){"use strict";n.r(t);var c=n("f2bf");const o={class:"orderItem"},a={class:"title"},i={class:"num"},s={class:"before"};function r(e,t,n,r,d,u){return Object(c["openBlock"])(),Object(c["createElementBlock"])("div",o,[Object(c["createElementVNode"])("div",a,Object(c["toDisplayString"])(n.name),1),Object(c["createElementVNode"])("div",i,Object(c["toDisplayString"])(n.num),1),Object(c["createElementVNode"])("div",s,Object(c["toDisplayString"])(n.sufix)+"："+Object(c["toDisplayString"])(n.before),1)])}var d={name:"BasicData",components:{},props:{sufix:{type:String,default:"昨日"},name:{type:String,default:""},num:{type:String,default:""},before:{type:String,default:""}}},u=(n("fa94"),function(e){e.__source="src/views/home/components/basicData.vue"}),f=n("6b0d"),l=n.n(f);"function"===typeof u&&u(d);const p=l()(d,[["render",r],["__scopeId","data-v-44bc27e6"]]);t["default"]=p},fa94:function(e,t,n){"use strict";n("6d2d")}}]);

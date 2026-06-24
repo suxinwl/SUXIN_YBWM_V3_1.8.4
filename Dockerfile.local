@@ -1,0 +1,14 @@
+FROM ccr.ccs.tencentyun.com/w7team/swoole:fpm-php8.0
+
+WORKDIR /data
+
+COPY . /data/
+
+RUN if [ ! -d /data/vendor ]; then php /data/composer.phar install --no-dev --no-interaction --prefer-dist --optimize-autoloader --ignore-platform-reqs; fi \
+    && chmod +x /data/docker/entrypoint.sh \
+    && mkdir -p /data/storage/logs /data/bootstrap/cache \
+    && chmod -R 777 /data/storage /data/bootstrap/cache
+
+EXPOSE 80 5200
+
+CMD ["sh", "/data/docker/entrypoint.sh"]

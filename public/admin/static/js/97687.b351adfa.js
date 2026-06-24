@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkyb_wmv3_business_admin"]=self["webpackChunkyb_wmv3_business_admin"]||[]).push([[97687],{97687:function(s,e,n){s.exports=n.p+"static/img/bottomNavPhone.be24fd30.png"}}]);

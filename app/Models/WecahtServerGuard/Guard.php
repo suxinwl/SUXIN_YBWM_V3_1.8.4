@@ -1,0 +1,62 @@
+<?php
+
+/*
+ * This file is part of the overtrue/wechat.
+ *
+ * (c) overtrue <i@overtrue.me>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
+namespace App\Models\WecahtServerGuard;
+
+use EasyWeChat\Kernel\ServerGuard;
+use EasyWeChat\OpenPlatform\Server\Handlers\Authorized;
+use EasyWeChat\OpenPlatform\Server\Handlers\Unauthorized;
+use EasyWeChat\OpenPlatform\Server\Handlers\UpdateAuthorized;
+use EasyWeChat\OpenPlatform\Server\Handlers\VerifyTicketRefreshed;
+use Symfony\Component\HttpFoundation\Response;
+use function EasyWeChat\Kernel\data_get;
+
+/**
+ * Class Guard.
+ *
+ * @author mingyoung <mingyoungcheung@gmail.com>
+ */
+class Guard extends ServerGuard
+{
+    public const EVENT_WEAPP_AUDIT_SUCCESS = 'weapp_audit_success';
+    public const EVENT_WEAPP_AUDIT_FAIL = 'weapp_audit_fail';
+    public const EVENT_WEAPP_AUDIT_DELAY = 'weapp_audit_delay';
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \EasyWeChat\Kernel\Exceptions\BadRequestException
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidArgumentException
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     */
+    protected function resolve(): Response
+    {
+        $this->registerHandlers();
+
+        $message = $this->getMessage();
+
+        if ($infoType = data_get($message, 'Event')) {
+            $this->dispatch($infoType, $message);
+        }
+
+        return new Response(static::SUCCESS_EMPTY_RESPONSE);
+    }
+
+    /**
+     * Register event handlers.
+     */
+    protected function registerHandlers()
+    {
+        $this->on(self::EVENT_WEAPP_AUDIT_SUCCESS, AuditSuccess::class);
+        $this->on(self::EVENT_WEAPP_AUDIT_FAIL, AuditFail::class);
+        $this->on(self::EVENT_WEAPP_AUDIT_DELAY, AuditDelay::class);
+    }
+}

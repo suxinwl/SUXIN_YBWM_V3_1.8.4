@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-7741ba4e"],{"4b4f":function(e,t,c){"use strict";c("e9e3")},b3f2:function(e,t,c){"use strict";c.r(t);var o=c("7f58"),n=(c("781c"),c("cf2e")),r=(c("797a"),c("f2bf"));const s={class:"footerBtn"},a={class:"footerCon"};function f(e,t,c,f,i,u){const b=n["a"],l=o["a"];return Object(r["openBlock"])(),Object(r["createElementBlock"])("div",s,[Object(r["createElementVNode"])("div",a,[Object(r["createVNode"])(l,{justify:"center"},{default:Object(r["withCtx"])(()=>[e.$slots.default?Object(r["renderSlot"])(e.$slots,"default",{key:0},void 0,!0):(Object(r["openBlock"])(),Object(r["createBlock"])(b,{key:1,color:"#006cff",type:"primary",onClick:f.save},{default:Object(r["withCtx"])(()=>[Object(r["createTextVNode"])("保存")]),_:1},8,["onClick"]))]),_:3})])])}var i={name:"FooterBtn",emits:["submit-form"],setup(e,{emit:t}){const c=Object(r["reactive"])({}),o=()=>{t("submit-form")};return{...Object(r["toRefs"])(c),save:o}}},u=(c("4b4f"),function(e){e.__source="src/components/footerBtn.vue"}),b=c("6b0d"),l=c.n(b);"function"===typeof u&&u(i);const d=l()(i,[["render",f],["__scopeId","data-v-a48c26ea"]]);t["default"]=d},e9e3:function(e,t,c){}}]);

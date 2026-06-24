@@ -1,0 +1,6 @@
+/*!
+ *  build: ybwmv3-supertube-admin
+ *  copyright: ybwmv3-supertube-admin
+ *  time: undefined
+ */
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-1560e043"],{1223:function(t,e,c){"use strict";c("abba")},abba:function(t,e,c){},b3a4:function(t,e,c){"use strict";c.r(e);var n=c("c1b8"),o=(c("7f44"),c("b9bd"),c("f2bf"));function a(t,e,c,a,b,r){const u=n["b"],i=n["a"];return Object(o["openBlock"])(),Object(o["createBlock"])(i,{class:"breadcrumb"},{default:Object(o["withCtx"])(()=>[(Object(o["openBlock"])(!0),Object(o["createElementBlock"])(o["Fragment"],null,Object(o["renderList"])(c.list,(e,c)=>(Object(o["openBlock"])(),Object(o["createBlock"])(u,{key:c,to:{path:e.path},onClick:n=>t.gotoBack(e,c)},{default:Object(o["withCtx"])(()=>[Object(o["createTextVNode"])(Object(o["toDisplayString"])(e.meta.title),1)]),_:2},1032,["to","onClick"]))),128))]),_:1})}var b={name:"Tag",props:{list:{type:Array,default(){return[]}}}},r=(c("1223"),function(t){t.__source="src/components/breadcrumb.vue"}),u=c("6b0d"),i=c.n(u);"function"===typeof r&&r(b);const l=i()(b,[["render",a],["__scopeId","data-v-3dc8ee99"]]);e["default"]=l}}]);

@@ -1,0 +1,4 @@
+location / {
+# 如果找不到真实存在的文件，把请求分发至 index.php 
+try_files $uri $uri/ /index.php?$args;
+} 
