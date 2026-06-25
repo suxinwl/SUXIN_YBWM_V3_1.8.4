@@ -297,15 +297,48 @@ if (!function_exists('httpRequest')) {
         if (empty($data)) {
             $type = 'get';
         }
-        if ($type == 'get') {
-            $data = $http->get($url, ['headers' => $header, 'query' => $data])->getBody()->getContents();
-        } else {
-            $data = $http->post($url, ['headers' => $header, 'json' => $data])->getBody()->getContents();
+        try {
+            if ($type == 'get') {
+                $data = $http->get($url, ['headers' => $header, 'query' => $data])->getBody()->getContents();
+            } else {
+                $data = $http->post($url, ['headers' => $header, 'json' => $data])->getBody()->getContents();
+            }
+        } catch (\Throwable $e) {
+            if ($authorizeHost && $requestHost === $authorizeHost && localAuthorizeDomainFallbackAvailable($url)) {
+                logger()->warning('Remote authorize request failed, using local fallback', [
+                    'url' => $url,
+                    'message' => $e->getMessage(),
+                ]);
+                return localAuthorizeDomainResponse($url, $data, $bool);
+            }
+
+            throw $e;
         }
         if ($bool) {
             return json_decode($data, true);
         }
         return $data;
+    }
+}
+
+if (!function_exists('localAuthorizeDomainFallbackAvailable')) {
+    function localAuthorizeDomainFallbackAvailable($url)
+    {
+        $path = parse_url($url, PHP_URL_PATH) ?: '';
+        $fallbackPaths = [
+            '/cloud/upgraded/getUpgradeInfo',
+            '/cloud/artice/getarticelist',
+            '/cloud/notice/getnoticelist',
+            '/api/order/get-order-list',
+        ];
+
+        foreach ($fallbackPaths as $fallbackPath) {
+            if (strpos($path, $fallbackPath) !== false) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 
