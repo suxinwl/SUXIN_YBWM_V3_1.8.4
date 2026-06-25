@@ -10,7 +10,7 @@
     <script src="element-plus/index.js"></script>
     <script src="js/request.js"></script>
     <script src="js/axios.min.js"></script>
-    <title>云贝餐饮V3安装</title>
+    <title>速信V3安装</title>
     <style>
         /* ::v-deep */
         :root {
@@ -38,7 +38,7 @@
 <div id="app">
     <div class="container">
         <div class="public_width">
-            <h2 class="title">欢迎您使用云贝餐饮V3</h2>
+            <h2 class="title">欢迎您使用速信V3</h2>
             <!--<div class="leftbg"></div>-->
             <!--<div class="rightbg"></div>-->
             <div class="main">
@@ -82,7 +82,7 @@
                         <div class="agreement_text">
                             <div class="agreement_text_in">
                                 <h1>
-                                    云贝餐饮V3独立版用户使用协议
+                                    速信V3独立版用户使用协议
                                 </h1>
                                 <p style="text-indent:28px">
                                     <strong>为了使您正确并合法的使用本系统，请您在安装前务必阅读并清楚下面的协议条款：</strong>
@@ -92,7 +92,7 @@
                                 </p>
                                 <p style="text-indent:32px">
                                     <strong><span
-                                            style="font-size:16px"><strong>一、本授权协议适用且仅适用于在我司购买的商业授权的用户，武汉云贝网络科技有限公司（以下简称我司）对本授权协议有最终的解释权。</strong></span></strong>
+                                            style="font-size:16px"><strong>一、本授权协议适用且仅适用于在我司购买的商业授权的用户，速信（以下简称我司）对本授权协议有最终的解释权。</strong></span></strong>
                                 </p>
                                 <p style="text-indent:32px">
                                     <strong><span style="font-size:16px"><strong>二、协议许可的权利</strong></span></strong>
@@ -123,7 +123,7 @@
                                             style="font-size:16px"><strong>三、协议规定的约束和限制</strong></span></strong>
                                 </p>
                                 <p style="text-indent:28px">
-                                    1、未获我司商业授权之前，不得将本系统用于任何用途；如需购买系统商业授权请联系云贝科技官方售前客服。
+                                    1、未获我司商业授权之前，不得将本系统用于任何用途；如需购买系统商业授权请联系速信官方售前客服。
                                 </p>
                                 <p style="text-indent:28px">
                                     2、授权的系统只限被授权方主体的授权域名、授权IP、授权服务器ID使用，未经官方许可，如转让或转卖，授权方将不提供任何技术支持和售后服务。
@@ -154,7 +154,7 @@
                                     2、在您购买本系统商业授权服务之后，我们将承诺对您提供相关的技术支持、使用说明、售后服务、BUG修复、系统升级等权益；但因系统BUG问题或用户使用操作不当等问题，我司不承担任何因使用本系统而产生的损失承担相关责任。用户出于自愿而购买本系统，您必须了解使用本系统的风险；
                                 </p>
                                 <p style="text-indent:28px">
-                                    3、电子文本形式的授权协议如同双方书面签署的协议一样，具有完全的和等同的法律效力。您一旦开始确认本系统并安装云贝餐饮V3独立版，即被视为完全理解并接受本协议的各项条款，在享有上述条款授予的权力的同时，受到相关的约束和限制。协议许可范围以外的行为，将直接违反本授权协议并构成侵权，我们有权随时终止授权，责令停止损害，并保留追究相关责任的权力。
+                                    3、电子文本形式的授权协议如同双方书面签署的协议一样，具有完全的和等同的法律效力。您一旦开始确认本系统并安装速信V3独立版，即被视为完全理解并接受本协议的各项条款，在享有上述条款授予的权力的同时，受到相关的约束和限制。协议许可范围以外的行为，将直接违反本授权协议并构成侵权，我们有权随时终止授权，责令停止损害，并保留追究相关责任的权力。
                                 </p>
                                 <p style="text-indent:28px">
                                     4、本协议的效力、解释及纠纷的解决，适用于中华人民共和国法律。若用户和我司之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，用户同意将纠纷或争议提交至我司注册所在地管辖权的人民法院管辖。
@@ -163,7 +163,7 @@
                                     &nbsp;
                                 </p>
                                 <div class="data">
-                                    <p style="text-align: right;">武汉云贝网络科技有限公司</p>
+                                    <p style="text-align: right;">速信</p>
                                     <p style="text-align: right;">2023年3月15日</p>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                         <div class="agreement_operation">
                             <el-checkbox-group v-model="agree" @change="changAgreement">
                                 <el-checkbox label="true" />
-                                同意<span class="color_b">云贝餐饮V3独立版商业授权安装许可协议</span>
+                                同意<span class="color_b">速信V3独立版商业授权安装许可协议</span>
                             </el-checkbox-group>
                             <input type="button" :value='counterDownTimer' :disabled="disabledNext" id="buu"
                                    class="step_first" @click="gotoNextStep()">
@@ -182,7 +182,7 @@
         </div>
         <div class="footer">
             <div class="center">
-                <p>Copyright© 2019-2023 武汉云贝网络科技有限公司版权所有</p>
+                <p>Copyright© 2019-2023 速信版权所有</p>
                 <p>网站备案号：鄂ICP备19023529号-1</p>
             </div>
         </div>

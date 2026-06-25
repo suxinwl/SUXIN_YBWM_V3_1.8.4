@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云贝餐饮V3安装</title>
+    <title>速信V3安装</title>
     <script src="js/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="element-plus/index.css"/>
@@ -103,7 +103,7 @@
 <div id="app">
     <div class="container">
         <div class="public_width">
-            <h2 class="title">欢迎您使用云贝餐饮V3独立版</h2>
+            <h2 class="title">欢迎您使用速信V3独立版</h2>
             <!--<div class="leftbg"></div>-->
             <!--<div class="rightbg"></div>-->
             <div class="main">
@@ -144,7 +144,7 @@
                         <div class="fon_26" style="color: #006CFF;font-family: ArialNarrow-BoldItalic;">恭喜您，系统已成功安装!</div>
                         <img src="image/zhanWei_r.png">
                     </div>
-                    <div class="fon_14 mar_t20" style="color: #8B8E8F;">希望云贝餐饮V3独立版能够为您的企业带来客户并创造价值；在后期的使用当中，如您有更好的产品建议和意见，请及时的反馈给我们哦！</div>
+                    <div class="fon_14 mar_t20" style="color: #8B8E8F;">希望速信V3独立版能够为您的企业带来客户并创造价值；在后期的使用当中，如您有更好的产品建议和意见，请及时的反馈给我们哦！</div>
                     <div class="addressList">
                         <div class="title">管理端后台账号地址信息</div>
                         <div style="margin-left: 78px;">
@@ -178,7 +178,7 @@
             </div>
             <div class="footer">
                 <div class="center">
-                    <p>Copyright© 2019-2023 武汉云贝网络科技有限公司版权所有</p>
+                    <p>Copyright© 2019-2023 速信版权所有</p>
                     <p>网站备案号：鄂ICP备19023529号-1</p>
                 </div>
             </div>

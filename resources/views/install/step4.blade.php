@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云贝餐饮V3安装</title>
+    <title>速信V3安装</title>
     <script src="js/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="element-plus/index.css"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
@@ -59,7 +59,7 @@
     </div>
     <div class="container">
         <div class="public_width">
-            <h2 class="title">欢迎您使用云贝餐饮V3独立版</h2>
+            <h2 class="title">欢迎您使用速信V3独立版</h2>
             <!--<div class="leftbg"></div>-->
             <!--<div class="rightbg"></div>-->
             <div class="main">
@@ -154,7 +154,7 @@
             </div>
             <div class="footer">
                 <div class="center">
-                    <p>Copyright© 2019-2023 武汉云贝网络科技有限公司版权所有</p>
+                    <p>Copyright© 2019-2023 速信版权所有</p>
                     <p>网站备案号：鄂ICP备19023529号-1</p>
                 </div>
             </div>

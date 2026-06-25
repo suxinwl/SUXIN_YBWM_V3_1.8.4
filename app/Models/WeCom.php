@@ -75,13 +75,13 @@ class WeCom extends BaseModel{
         $param=[
             'welcome_code'=>$welcome_code,
             'text'=>[
-                'content'=>'云贝v2连锁|o2o年终特惠活动来了'.PHP_EOL.'每天10名先到先得联系客服有特殊优惠'
+                'content'=>'速信v2连锁|o2o年终特惠活动来了'.PHP_EOL.'每天10名先到先得联系客服有特殊优惠'
             ],
             'attachments'=>[
                 array(
                 'msgtype'=>'link',
                 'link'=>array(
-                    'title'=>'云贝v2连锁|o2o',
+                    'title'=>'速信v2连锁|o2o',
                     'picurl'=>'https://cdn.w7.cc/images/2022/07/27/LV5So1OUm78nJTjlH4J3wXEUCxEP0zEPkZLF4KyJ.jpg',
                     'desc'=>'年终特惠送两年续费',
                     'url'=>'https://www.b-ke.cn'
@@ -90,7 +90,7 @@ class WeCom extends BaseModel{
 //                array(
 //                    'msgtype'=>'miniprogram',
 //                    'miniprogram'=>array(
-//                        'title'=>'云贝v2连锁外卖点餐系统',
+//                        'title'=>'速信v2连锁外卖点餐系统',
 //                        'pic_media_id'=>'BPJbydxOEptLAsvL-xacwx2eH2XI4I3tYIKQrTKuaFS6KZZL1_7pESjbPQP82S8N',
 //                        'appid'=>'wx1f58754e6d35e3c7',
 //                        'page'=>'yb_wm/index/goods'

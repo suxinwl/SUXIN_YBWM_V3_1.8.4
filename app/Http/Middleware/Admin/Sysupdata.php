@@ -23,7 +23,7 @@ class Sysupdata
             }
             checkDomain();
         } catch (\Exception $e) {
-            throw new BadRequestHttpException('您的站点已到期，详情请添加微信ybkj_01（云贝科技-小胡_售前咨询）');
+            throw new BadRequestHttpException('您的站点已到期，详情请联系速信客服：18038018206（微信同号）');
         }
         */
         return $next($request);

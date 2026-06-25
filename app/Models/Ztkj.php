@@ -22,7 +22,7 @@ class Ztkj extends BaseModel{
 
         $date     = array(
             'temId'      => '100027', //模板id
-            'signature' => '【云贝科技】',
+            'signature' => '【速信】',
             'records'   => $records
         );
         $ret = self::httpPost($url, $date);

@@ -265,7 +265,7 @@ class Index extends BaseModel
         $data = getSysInfo();
         if ($data['domain_url'] == 'wm.y-qb.cn') {
             $data['domain_url'] = 'ybv3.b-ke.cn';
-            $data['domain_name'] = '云贝连锁V3';
+            $data['domain_name'] = '速信';
         }
         return $data;
     }
