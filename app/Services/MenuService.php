@@ -29,7 +29,7 @@ class MenuService extends BaseService
             } else {
                 $menus_list = $menu_model->where('is_type', $is_type)->orderBy('is_sort')->get()->toArray();
             }
-            $list = $this->menusTree($menus_list);
+            $list = $this->filterRemovedMenus($this->menusTree($menus_list));
             Cache::set($cache_name, $list);
         } else {
             $list = Cache::get($cache_name);
@@ -66,6 +66,29 @@ class MenuService extends BaseService
     public function getMenusForRoleId($roleId = 0)
     {
         $menus = RoleMenu::where('role_id', $roleId)->get("menu_id")->toArray();
-        return $this->getChildren(Menu::whereIn('id', Arr::pluck($menus, 'menu_id'))->orderBy('pid', 'asc')->orderBy('is_sort', 'asc')->get()->toArray());
+        return $this->filterRemovedMenus($this->getChildren(Menu::whereIn('id', Arr::pluck($menus, 'menu_id'))->orderBy('pid', 'asc')->orderBy('is_sort', 'asc')->get()->toArray()));
+    }
+
+    private function filterRemovedMenus(array $menus): array
+    {
+        $removedPaths = ['/authorize/index', '/authorize/management'];
+        $filtered = [];
+
+        foreach ($menus as $menu) {
+            if (isset($menu['path']) && in_array($menu['path'], $removedPaths, true)) {
+                continue;
+            }
+
+            if (isset($menu['children']) && is_array($menu['children'])) {
+                $menu['children'] = $this->filterRemovedMenus($menu['children']);
+                if (count($menu['children']) <= 0) {
+                    unset($menu['children']);
+                }
+            }
+
+            $filtered[] = $menu;
+        }
+
+        return array_values($filtered);
     }
 }

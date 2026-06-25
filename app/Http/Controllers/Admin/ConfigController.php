@@ -108,9 +108,14 @@ class ConfigController extends ApiController{
         $data['copyrightSetting'] = ConfigService::getSystemSet('copyrightSetting');
         return $this->success($data);
     }
-    public function getSystemInfo(){
+    public function getSystemInfo(Request $request){
         $data = getSysInfo();
-        $data['email']=$data['email'];
+        $data['domain_name'] = '速信';
+        $data['domain_url'] = $request->getHost();
+        $data['version'] = getVersionInfo()['version'] ?? ($data['version'] ?? '1.8.4');
+        $data['time_start'] = $data['time_start'] ?? date('Y-m-d H:i:s');
+        $data['time_end'] = '2099-12-31 23:59:59';
+        $data['email'] = $data['email'] ?? '';
         $applyCount = Apply::applyTotal();
         $data['platforms_number']=$applyCount;
         return $this->success($data);
