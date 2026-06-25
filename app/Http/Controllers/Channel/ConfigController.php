@@ -272,6 +272,16 @@ class ConfigController extends ApiController
     }
     public function authCode()
     {
+        $uniacid = $this->uniacid() ?: '0';
+        $key = "authCode:" . $uniacid;
+        $code = Cache::remember($key, 86400, function () use ($uniacid) {
+            $appUrl = env('APP_URL') ?: Request()->getSchemeAndHttpHost();
+            $host = parse_url($appUrl, PHP_URL_HOST) ?: trim(str_replace(['https://', 'http://'], '', $appUrl), '/');
+            $seed = implode('|', ['suxin-auth-code', $host, $uniacid, config('app.key')]);
+            return strtoupper(substr(hash('sha256', $seed), 0, 12));
+        });
+        return $this->success(['code' => $code], 'success');
+
         try {
             $key = "authCode:" . $this->uniacid();
             $code = Cache::get($key);

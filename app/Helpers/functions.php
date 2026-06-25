@@ -329,6 +329,7 @@ if (!function_exists('localAuthorizeDomainFallbackAvailable')) {
             '/cloud/upgraded/getUpgradeInfo',
             '/cloud/artice/getarticelist',
             '/cloud/notice/getnoticelist',
+            '/cloud/code',
             '/api/order/get-order-list',
         ];
 
@@ -370,6 +371,13 @@ if (!function_exists('localAuthorizeDomainResponse')) {
                 'total' => 0,
                 'current_page' => (int)($data['pageNo'] ?? 1),
                 'per_page' => (int)($data['pageSize'] ?? 20),
+            ];
+        } elseif (strpos($path, '/cloud/code') !== false) {
+            $appUrl = ($data['domain'] ?? env('APP_URL')) ?: Request()->getSchemeAndHttpHost();
+            $host = parse_url($appUrl, PHP_URL_HOST) ?: trim(str_replace(['https://', 'http://'], '', $appUrl), '/');
+            $seed = implode('|', ['suxin-auth-code', $host, config('app.key')]);
+            $response['data'] = [
+                'code' => strtoupper(substr(hash('sha256', $seed), 0, 12)),
             ];
         }
 
