@@ -28,6 +28,7 @@ class SystemController extends ApiController
         $data['username'] = '速信';
         $data['appName'] = '速信';
         $data['phone'] = '';
+        $data['user_tel'] = '';
         $data['email'] = '';
         $data['qq'] = '';
         $data['wechat'] = '';

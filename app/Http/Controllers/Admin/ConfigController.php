@@ -116,12 +116,13 @@ class ConfigController extends ApiController{
         $data['username'] = '速信';
         $data['appName'] = '速信';
         $data['phone'] = '';
+        $data['user_tel'] = '';
         $data['qq'] = '';
         $data['wechat'] = '';
         $data['version'] = getVersionInfo()['version'] ?? ($data['version'] ?? '1.8.4');
         $data['time_start'] = $data['time_start'] ?? date('Y-m-d H:i:s');
         $data['time_end'] = '2099-12-31 23:59:59';
-        $data['email'] = $data['email'] ?? '';
+        $data['email'] = '';
         $applyCount = Apply::applyTotal();
         $data['platforms_number']=$applyCount;
         return $this->success($data);
