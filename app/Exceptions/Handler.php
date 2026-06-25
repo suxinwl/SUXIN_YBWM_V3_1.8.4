@@ -19,6 +19,8 @@ use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 use Tymon\JWTAuth\Exceptions\TokenInvalidException;
 use  Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Exceptions\ThrottleRequestsException;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\Facades\Log;
 
 class Handler extends ExceptionHandler
@@ -62,15 +64,23 @@ class Handler extends ExceptionHandler
 
     public function render($request, Throwable $e)
     {
+        if (Facade::getFacadeApplication() === null) {
+            return new JsonResponse([
+                'status' => 'error',
+                'msg' => $e->getMessage(),
+                'code' => 500,
+            ], 500);
+        }
+
         if ($e instanceof ValidationException) {
             return $this->failed(current($e->errors()), $e->status);
         }
         $e = $this->prepareException($this->mapException($e));
-        Log::info($e->getMessage());
+        $this->safeLog($e->getMessage());
         foreach (array_keys($this->doReport) as $report) {
             if ($e instanceof $report) {
                 $message = $this->doReport[$report];
-                Log::info($message);
+                $this->safeLog($message);
                 return $this->failed($message[0], $message[1]);
             }
         }
@@ -80,5 +90,14 @@ class Handler extends ExceptionHandler
             return $this->failed($e->getMessage(), 401);
         }
         return $this->failed($e->getMessage());
+    }
+
+    private function safeLog($message): void
+    {
+        try {
+            Log::info($message);
+        } catch (Throwable $throwable) {
+            //
+        }
     }
 }

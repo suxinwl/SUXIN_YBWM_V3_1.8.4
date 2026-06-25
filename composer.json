@@ -25,6 +25,7 @@
         "laravel/framework": "^9.11",
         "laravel/tinker": "^2.7",
         "maatwebsite/excel": "~3.1",
+        "milon/barcode": "^9.0",
         "monolog/monolog": "^2.2",
         "mrgoon/aliyun-sms": "^2.0",
         "nyholm/psr7": "^1.4",
