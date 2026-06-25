@@ -22,6 +22,10 @@ class SystemController extends ApiController
     public function index(Request $request)
     {
         $data = getSysInfo();
+        $data['domain_name'] = '速信';
+        $data['domain_url'] = $request->getHost();
+        $data['time_start'] = $data['time_start'] ?? date('Y-m-d H:i:s');
+        $data['time_end'] = '2099-12-31 23:59:59';
         return $this->success($data, __('base.success'));
     }
 
