@@ -161,6 +161,9 @@ class StoreController extends ApiController
         if ($type == 'paySwitch') {
             $model->paySwitch = $model->paySwitch == 1 ? 0 : 1;
         }
+        if ($type == 'expressSwitch') {
+            $model->expressSwitch = $model->expressSwitch == 1 ? 0 : 1;
+        }
         if ($type == 'pickupSwitch') {
             $model->pickupSwitch = $model->pickupSwitch == 1 ? 0 : 1;
         }

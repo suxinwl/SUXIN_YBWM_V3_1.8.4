@@ -35,7 +35,7 @@ class Store extends BaseModel
     protected $_inStoreSetting;
     protected $_takeScreenSetting;
     protected $table = 'store';
-    protected $fillable = ['name', 'isolate', 'pickupSwitch', 'groupId', 'uniacid', 'sort', 'storeSn', 'surroundings', 'region', 'address', 'lat', 'lng', 'contact', 'mobile', 'storeMobile', 'labelId', 'isShowSwitch', 'operatingStatus', 'businessStatus', 'businessData', 'shareImg', 'shareTitle', 'businessLicense', 'tradeLicense', 'takeoutSwitch', 'inStoreSwitch', 'paySwitch'];
+    protected $fillable = ['name', 'isolate', 'pickupSwitch', 'groupId', 'uniacid', 'sort', 'storeSn', 'surroundings', 'region', 'address', 'lat', 'lng', 'contact', 'mobile', 'storeMobile', 'labelId', 'isShowSwitch', 'operatingStatus', 'businessStatus', 'businessData', 'shareImg', 'shareTitle', 'businessLicense', 'tradeLicense', 'takeoutSwitch', 'inStoreSwitch', 'paySwitch', 'expressSwitch', 'differentPlacesSwitch'];
     protected $casts =  [
         'surroundings' => 'array',
         'businessData' => 'array',
@@ -58,6 +58,8 @@ class Store extends BaseModel
         'takeoutSwitch' => 1,
         'inStoreSwitch' => 1,
         'paySwitch' => 1,
+        'expressSwitch' => 0,
+        'differentPlacesSwitch' => 0,
         'pickupSwitch' => 1,
         'labelId' => '[]',
     ];

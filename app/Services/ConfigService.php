@@ -74,7 +74,7 @@ class ConfigService
         } else {
             $data = [];
         }
-        return $data;
+        return self::normalizeStoreConfig($ident, $data);
     }
 
 
@@ -214,7 +214,8 @@ class ConfigService
             $config = StoreConfig::where("storeId", $storeId)->get();
             $config = collect($config)->mapWithKeys(function ($item, $key) {
                 $item  = collect($item)->toArray();
-                return [$item['ident'] => collect($item['data'])->toArray()];
+                $data = self::normalizeStoreConfig($item['ident'], collect($item['data'])->toArray());
+                return [$item['ident'] => $data];
             });
             Cache::set($key, json_encode($config, 320));
         }
@@ -226,5 +227,16 @@ class ConfigService
             }
         }
         return $config;
+    }
+
+    private static function normalizeStoreConfig($ident, $data)
+    {
+        if ($ident == 'storeSetting' && is_array($data)) {
+            $data += [
+                'expressSwitch' => 0,
+                'differentPlacesSwitch' => 0,
+            ];
+        }
+        return $data;
     }
 }

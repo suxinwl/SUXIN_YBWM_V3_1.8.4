@@ -45,9 +45,7 @@ class StoreConfigController extends ApiController
             'data' => $request->all(),
         ]);
         if($request->ident == 'storeSetting'){
-            $storeInfo=Store::where('id',$this->storeId())->first();
-            $storeInfo->differentPlacesSwitch=$request->differentPlacesSwitch?:0;
-            $storeInfo->save();
+            $this->syncStoreSwitches($request);
         }
         $key =  "storeConfigMap:" . $this->storeId();
         Cache::delete($key);
@@ -146,9 +144,7 @@ class StoreConfigController extends ApiController
         $model->data = $params;
         $model->save();
         if($ident == 'storeSetting'){
-            $storeInfo=Store::where('id',$this->storeId())->first();
-            $storeInfo->differentPlacesSwitch=$request->differentPlacesSwitch?:0;
-            $storeInfo->save();
+            $this->syncStoreSwitches($request);
         }
         $key =  "storeConfigMap:" . $this->storeId();
         Cache::delete($key);
@@ -168,5 +164,20 @@ class StoreConfigController extends ApiController
             $model->delete();
         }
         return $this->success([], __('base.success'));
+    }
+
+    private function syncStoreSwitches(Request $request)
+    {
+        $storeInfo = Store::where('id', $this->storeId())->first();
+        if (!$storeInfo) {
+            return;
+        }
+        if ($request->has('differentPlacesSwitch')) {
+            $storeInfo->differentPlacesSwitch = $request->differentPlacesSwitch ?: 0;
+        }
+        if ($request->has('expressSwitch')) {
+            $storeInfo->expressSwitch = $request->expressSwitch ?: 0;
+        }
+        $storeInfo->save();
     }
 }
