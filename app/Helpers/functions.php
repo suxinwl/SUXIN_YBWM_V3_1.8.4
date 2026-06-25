@@ -347,9 +347,10 @@ if (!function_exists('localAuthorizeDomainResponse')) {
     {
         $path = parse_url($url, PHP_URL_PATH) ?: '';
         $currentVersion = getVersionInfo();
+        $remoteSkipped = config('app.env') === 'local' || env('DISABLE_REMOTE_AUTHORIZE_HTTP', false);
         $response = [
             'status' => 'success',
-            'msg' => 'Local environment: remote authorize request skipped',
+            'msg' => $remoteSkipped ? 'Remote authorize request skipped' : 'Remote authorize request unavailable',
             'code' => 200,
             'data' => [],
         ];
