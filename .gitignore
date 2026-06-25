@@ -19,7 +19,9 @@
 /php-cgi-80.sock
 /testlicense.lic
 /public/*.lic
-/public/storage/
+/public/storage/*
+!/public/storage/default/
+!/public/storage/default/**
 /public/baksuper2/
 /public/baksuper3/
 /app/payment/wechat/cert/
