@@ -157,7 +157,7 @@ function getSysInfo()
         $json =  file_get_contents(public_path() . '/secret.json');
     }
     if (empty($json)) {
-        throw new BadRequestHttpException('站点授权文件丢失，系统无法正常运行;请联系官方客服：15307193890（微信同号）');
+        throw new BadRequestHttpException('站点授权文件丢失，系统无法正常运行;请联系官方客服：18038018206（微信同号）');
     }
     $json = Crypt::decryptString($json);
     $data = json_decode($json, true);
@@ -678,7 +678,7 @@ function checkDomain()
     $domain = $_SERVER['HTTP_HOST'];
     if ($data) {
         if ($data['status'] == 3) {
-            throw new BadRequestException('当前站点已被拉黑，系统无法正常运行;请联系官方客服：15307193890（微信同号）');
+            throw new BadRequestException('当前站点已被拉黑，系统无法正常运行;请联系官方客服：18038018206（微信同号）');
         }
         if ($data['time_type'] == 2 && $data['time_end'] <= date('Y-m-d H:i:s', time())) {
             throw new BadRequestException('您的站点服务已到期，系统升级服务将被限制;如需解除限制请在后台支付服务费');
@@ -689,16 +689,16 @@ function checkDomain()
                 throw new BadRequestException('请使用主域名更新系统');
             } else {
                 if ($data['domain_url'] !== $domain) {
-                    throw new BadRequestException('请使用正版，系统无法正常运行，请联系开发者：15307193890（微信同号）');
+                    throw new BadRequestException('请使用正版，系统无法正常运行，请联系开发者：18038018206（微信同号）');
                 }
             }
         } else {
             if ($data['domain_url'] !== $domain) {
-                throw new BadRequestException('请使用正版，系统无法正常运行，请联系开发者：15307193890（微信同号）');
+                throw new BadRequestException('请使用正版，系统无法正常运行，请联系开发者：18038018206（微信同号）');
             }
         }
     } else {
-        throw new BadRequestException('请使用正版，系统无法正常运行，请联系开发者：15307193890（微信同号）');
+        throw new BadRequestException('请使用正版，系统无法正常运行，请联系开发者：18038018206（微信同号）');
     }
 }
 

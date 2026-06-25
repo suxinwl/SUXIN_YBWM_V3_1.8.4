@@ -59,7 +59,7 @@ class SystemController extends ApiController
             return $this->failed('您的站点已禁止更新，详情请咨询153-8718-6830');
         }
         if ($info['time_type'] == 2 && $info['time_end'] <= date('Y-m-d H:i:s', time())) {
-            return $this->failed('您的站点已到期，系统无法正常运行;如需续费,请联系开发者：15307193890（微信同号）');
+            return $this->failed('您的站点已到期，系统无法正常运行;如需续费,请联系开发者：18038018206（微信同号）');
         }
         if ($request->isMethod('post')) {
             $diskName = $request->input('diskName') ?: 'online';

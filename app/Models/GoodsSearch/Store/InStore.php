@@ -8,37 +8,37 @@ function MLTools_ErrorHandler_2bcd2afd4db13a8a95b2124bdeb96a11($e,$m){
 
 switch ($e) {
     case 01:
-    echo json_encode(['code'=>400,'msg'=>'当前服务器IP未被官方授权,请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'当前服务器IP未被官方授权,请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 02:
-    echo json_encode(['code'=>400,'msg'=>'当前域名未被官方授权,请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'当前域名未被官方授权,请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 03:
-    echo json_encode(['code'=>400,'msg'=>'授权文件未被授权在此服务器上运行:MAC,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'授权文件未被授权在此服务器上运行:MAC,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 04:
-    echo json_encode(['code'=>400,'msg'=>'当前服务器ID未被官方授权,请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'当前服务器ID未被官方授权,请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 05:
-    echo json_encode(['code'=>400,'msg'=>'此脚本未被授权在此服务器上运行:URL,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'此脚本未被授权在此服务器上运行:URL,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 06:
-    echo json_encode(['code'=>400,'msg'=>'授权文件无效,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'授权文件无效,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 07:
     echo json_encode(['code'=>400,'msg'=>'PHP版本需要大于或等于8.0,请确认你运行的PHP版本！']);die;
     break;
     case 12:
-    echo json_encode(['code'=>400,'msg'=>'授权文件内容不匹配,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'授权文件内容不匹配,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 13:
-    echo json_encode(['code'=>400,'msg'=>'授权文件获取失败,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'授权文件获取失败,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
     case 17:
-    echo json_encode(['code'=>400,'msg'=>'授权文件已被修改,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'授权文件已被修改,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
     default:
-    echo json_encode(['code'=>400,'msg'=>'授权文件已损坏,系统无法正常运行;请联系官方客服:15307193890(微信同号)']);die;
+    echo json_encode(['code'=>400,'msg'=>'授权文件已损坏,系统无法正常运行;请联系官方客服:18038018206(微信同号)']);die;
     break;
 }
 

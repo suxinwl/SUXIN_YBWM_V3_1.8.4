@@ -167,7 +167,7 @@
 			//确定
 			confirm() {
 				this.confirmText = '我知道了'
-				this.content = '当前服务已到期，如需使用请联系15307193890'
+				this.content = '当前服务已到期，如需使用请联系18038018206'
 			},
 			//开台
 			founding() {

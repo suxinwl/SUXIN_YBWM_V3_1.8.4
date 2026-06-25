@@ -237,7 +237,7 @@ class InstallController extends Controller
      public function getConfig($machineid='',$domain=''){
         $config =  [
             // 用户名
-            'username'         => '15307193890',
+            'username'         => '18038018206',
 
             // key
             'userkey'    => '12112f8d690dc8c2613dc3fadd71e9c4fffcfb9d',
